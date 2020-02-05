@@ -1,5 +1,4 @@
 const postReducer = (state = {
-    result: 1,
     posts: [],
     comments: [],
     newComments: []
