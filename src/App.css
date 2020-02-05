@@ -1,38 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #f9f9fa;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  font-size: 1.5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.posts-container {
+  width: 60%;
+  height: 90vh;
+  overflow: auto;
+}
+
+.border-container {
+  border-radius: 3px;
+  border: 1px solid #d6d6d6;
+  box-shadow: 1px 1px 0px #c2c2c2;
+}
+
+.post {
+  background: #fff;
+  width: 80%;
+  min-height: 20%;
+  margin: 1% 0 1% 0;
+  text-align: left;
+  hyphens: auto;
+  padding-left: 1%;
+}
+
+.post :hover{
+  cursor: pointer;
+}
+
+.comments-popup {
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #f9f9fa;
+}
+
+.comments-popup_inner {
+  z-index: 16;
+  position: relative;
+  top: 5%;
+  margin: auto;
+  background: #fff;
+  height: 90vh;
+  width: 60%;
+}
+
+.body-text{
+  font-size: 0.7em;
+}
+
+.popup-header{
+  width: 90%;
+  height: 25vh;
+}
+
+.popup-body{
+  width: 90%;
+  height: 75vh;
+  align-items: flex-start;
+}
+
+.over-flow{
+  overflow: auto;
+}
+
+.align-self-center{
+  align-self: center;
+}
+
+.input-container{
+  width: 100%;
+}
+.input-container input{
+  width: 90%;
 }
