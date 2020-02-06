@@ -31,7 +31,7 @@
 
 .post {
   background: #fff;
-  width: 80%;
+  width: 95%;
   min-height: 20%;
   margin: 1% 0 1% 0;
   text-align: left;
@@ -64,6 +64,7 @@
   background: #fff;
   height: 90vh;
   width: 60%;
+  padding: 1%;
 }
 
 .body-text{
@@ -95,5 +96,27 @@
   margin-top: 5%;
 }
 .input-container input{
-  width: 90%;
+  width: 80%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+	box-shadow: 0px 10px 14px -7px #3a3e3f;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px 17px;
+}
+
+.btn-gray{
+  background: gray;
 }

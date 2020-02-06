@@ -14,19 +14,21 @@ const Comments = (props)=>{
                 <div className="popup-header over-flow" >
                     <h3>{props.post.title+" - POST ID:"+props.post.id}</h3>
                     <span className="body-text">{props.post.body}</span>
+                    <hr style={{width: '100%'}}/>
                 </div>
                 <div className="flex-container popup-body" >
                     <div><label>Comments:</label></div>
                     <div className="over-flow">
                         {
                             props.comments.map(item => {
-                                return (<div key={item.id}><Comment {...item} /><hr style={{width: '90%'}}/></div>)
+                                return (<div key={item.id}><Comment {...item} /></div>)
                             })
                         }
                     </div>
                     <div className="input-container">
                         <input type="text" onChange={event=>setNewComment(event.target.value)} placeholder="Add new comment"/>
                         <button 
+                            className="btn btn-lightBlue"
                             onClick={()=>newComment!==''?props.addComment({
                                 postId: props.post.id, 
                                 id: props.comments.length,
@@ -37,7 +39,7 @@ const Comments = (props)=>{
                         >Post</button>
                     </div>
                     <div className="align-self-center">
-                        <button onClick={()=>props.handlePopup('close')} >Close</button>
+                        <button className="btn btn-gray" onClick={()=>props.handlePopup('close')} >Close</button>
                     </div>
                 </div>
             </div>

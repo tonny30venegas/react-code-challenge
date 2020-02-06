@@ -4,16 +4,14 @@ import Posts from './Posts';
 import '../App.css';
 
 
-class App extends React.Component{
+const App = () =>{
 
-  render(){
     return (
       <div className="flex-container App">
         <h1>Posts:</h1>
         <Posts />
       </div>
     );
-  }
 }
 
 

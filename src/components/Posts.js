@@ -10,26 +10,38 @@ const endpoint = "https://jsonplaceholder.typicode.com/posts";
 class Posts extends React.Component{
 
 
+    state = {
+        isLoading: true
+    }
     componentDidMount(){
         this.loadInformation();
     }
 
     loadInformation = () => {
+        this.setState({isLoading: true});
         fetch(endpoint, {method: 'GET'})
         .then(res => res.json())
-        .then(data => {this.props.setPost(data)})
+        .then(data => {
+            this.props.setPost(data);
+            this.setState({isLoading: false});
+        })
     }
     
     render(){
-        return (
-            <div className="flex-container posts-container">
-                {
-                    this.props.post.posts.map((post)=>{
-                        return <Post post={post} key={post.id}/>
-                    })
-                }
-            </div>
-        )
+        return this.state.isLoading?
+            (
+                <div className="flex-container posts-container">
+                    Loading...
+                </div>
+            ):(
+                <div className="flex-container posts-container">
+                    {
+                        this.props.post.posts.map((post)=>{
+                            return <Post post={post} key={post.id}/>
+                        })
+                    }
+                </div>
+            )
     }
 }
 
